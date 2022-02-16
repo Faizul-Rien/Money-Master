@@ -1,39 +1,46 @@
 
 function amountInput(amount){
-    const incomeInput = document.getElementById(amount +'-input');
-    const inputValue = parseFloat(incomeInput.value);
-
-    return inputValue;
-
     
+    const inputAmount = document.getElementById(amount +'-input');
+    const inputValue = parseFloat(inputAmount.value);
+    inputAmount.value = inputValue;
+    return inputValue;
 }
-
-
 document.getElementById('calculate-btn').addEventListener('click',function(){
     
-    const inputValue = amountInput('income');
+    const incomeValue = amountInput('income');
     const foodValue = amountInput('food');
     const rentValue = amountInput('rent');
     const clothesValue = amountInput('clothes');
+    const negativeValue = document.getElementById('negative');
 
-    const wrongInput = document.getElementById('failed');
+    if ((incomeValue<0 || foodValue <0 || rentValue <0 || clothesValue <0) ) {
+        negativeValue.style.display = 'block';
+    }
+    else if(isNaN(incomeValue)|| isNaN(foodValue)|| isNaN(rentValue)|| isNaN(clothesValue)){
+        negativeValue.style.display = 'block';
+    }
 
+    else{
+        negativeValue.style.display = 'none';
+    }
    
-
     const totalExpenses = document.getElementById('total-expenses');
     const totalExpensesValue = foodValue + rentValue + clothesValue;
     totalExpenses.innerText= totalExpensesValue;
 
-    if(totalExpensesValue > inputValue){
+    const wrongInput = document.getElementById('failed');
+
+    if(totalExpensesValue > incomeValue){
         const BalanceLeft = document.getElementById('balance-left');
-        const balanceValue = inputValue - totalExpensesValue;
+        const balanceValue = incomeValue - totalExpensesValue;
         BalanceLeft.innerText = balanceValue;
         wrongInput.style.display = 'block';
     }
    
     else{
         const BalanceLeft = document.getElementById('balance-left');
-        const balanceValue = inputValue - totalExpensesValue;
+        const balanceValue = incomeValue - totalExpensesValue;
         BalanceLeft.innerText = balanceValue;
         wrongInput.style.display = 'none';
 
