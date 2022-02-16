@@ -1,4 +1,5 @@
 
+// Input amount common function
 function amountInput(amount){
     
     const inputAmount = document.getElementById(amount +'-input');
@@ -6,6 +7,7 @@ function amountInput(amount){
     inputAmount.value = inputValue;
     return inputValue;
 }
+//  calculate button handler
 document.getElementById('calculate-btn').addEventListener('click',function(){
     
     const incomeValue = amountInput('income');
@@ -47,6 +49,7 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     }
 })
 
+// save button handler 
 document.getElementById('save-btn').addEventListener('click',function(){
     const saveMoney = amountInput('save');
     const inputValue = amountInput('income')
