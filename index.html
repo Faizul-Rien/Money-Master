@@ -5,8 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>Hi<img src="https://img.icons8.com/emoji/48/000000/dollar-banknote-emoji.png"/></h1>
+   <header class="flex justify-center mt-10 mb-10">
+    <h1 class="text-4xl font-semibold text-orange-400">Financial Plan</h1>
+    <img src="https://img.icons8.com/emoji/48/000000/dollar-banknote-emoji.png"/>
+   </header>
+
+<main>
+    <section>
+            <div class="grid grid-cols-2 gap-14">
+                <div class="ml-20">
+                    <img src="image/money.jpeg" alt="">
+                </div>
+                <div class="bg-green-100 mr-20">
+                    <h3 class="text-center text-2xl font-medium mb-4 mt-10">Income</h3>
+                    <div class="flex justify-center mb-6">
+                    <h4 class="mr-2">Income:</h4>
+                    <input id="income-input" class="bg-gray-300 pl-1 outline-0 rounded"  type="text">
+                    </div>
+    
+                    <h3 class="text-center text-2xl font-medium mb-4 ">Expenses</h3>
+                    <div class="flex justify-center mb-4">
+                    <h4 class="mr-5">Food:</h4>
+                    <input id="food-input" class="bg-gray-300 pl-1 outline-0 rounded" type="text">
+                    </div>
+    
+                    <div class="flex justify-center mb-4" >
+                    <h4 class="mr-6">Rent:</h4>
+                    <input id="rent-input" class="bg-gray-300 pl-1 outline-0 rounded" type="text">
+                    </div>
+    
+                    <div class="flex justify-center mb-6">
+                    <h4 class="mr-2">Clothes:</h4>
+                    <input id="clothes-input" class="bg-gray-300 pl-1 outline-0 rounded" type="text">
+                    </div>
+                    <button id="calculate-btn" class="bg-orange-400 ml-40 w-44 h-10 rounded text-white font-medium mb-8">Calculate</button>
+    
+                    <h3 class="text-center text-2xl font-medium mb-4 ">Total Expenses: <span id="total-expenses">00</span></h3>
+                    <h3 class="text-center text-2xl font-medium mb-8 ">Balance: <span id="balance-left">00</span></h3>
+    
+                    <div class="flex justify-center mb-4">
+                    <h4 class="mr-2">Save:</h4>
+                    <input id="save-money" class="w-20 bg-gray-300 rounded mr-2 outline-0 pl-1" type="text">
+                    <P>%</P>
+                    <button id="save-btn" class="bg-orange-400 ml-2 rounded w-20 text-white ">Save</button>
+                    </div>
+    
+                    <h3 class="text-center mb-2 font-medium">Saving Amount: <span id="saving-amount">00</span></h3>
+                    <h3 class="text-center font-medium">Remaining Balance: <span id="remaining-balance">00</span></h3>
+    
+    
+    
+                </div>
+            </div>
+    </section>
+</main>
+
+
+
+    <script src="js/calculate.js"></script>
 </body>
 </html>
