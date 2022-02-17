@@ -7,9 +7,9 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body">
-   <header class="flex justify-center mt-10 mb-10">
-    <h1 class="text-4xl font-semibold text-orange-400">Financial Plan</h1>
+<body class="">
+   <header class="flex justify-center mt-10 mb-10 ">
+    <h1 class="text-4xl font-semibold text-orange-400 ">Financial Plan</h1>
     <img src="https://img.icons8.com/emoji/48/000000/dollar-banknote-emoji.png"/>
    </header>
 
@@ -17,12 +17,12 @@
     <section>
             <!-- Image portion -->
             <div class="flex flex-col sm:grid sm:grid-cols-2 gap-14 ">
-                <div class=" sm:ml-20">
+                <div class="ml-0 sm:ml-20 ">
                     <img src="image/money.jpeg" alt="">
                 </div>
 
                 <!--Calculaiton portion  -->
-                <div class="bg-green-100 sm:mr-20">
+                <div class="bg-green-100 mr-0 sm:mr-20">
                     <h3 class="text-center text-2xl font-medium mb-4 mt-10">Income</h3>
                     <div class="flex justify-center mb-6">
                     <h4 class="mr-2">Income:</h4>
@@ -46,10 +46,10 @@
                     </div>
 
                     <div class="mb-8 text-center">
-                        <p id="negative" class="alert " style="display: none;">❌ Please enter a Pgitositive Number value.</p>
+                        <p id="negative" class="alert " style="display: none;">❌ Please enter a Positive Number value.</p>
                     </div>
                    
-                    <button id="calculate-btn" class="bg-orange-400 sm:ml-40 ml-10 sm:w-44 h-10 rounded text-white font-medium mb-8">Calculate</button>
+                    <button id="calculate-btn" class="bg-orange-400 sm:ml-40 ml-20 w-32 sm:w-44 h-10 rounded text-white font-medium mb-8">Calculate</button>
     
                     <h3 class="text-center text-2xl font-medium mb-4 ">Total Expenses: <span id="total-expenses">00</span></h3>
                     <h3 class="text-center text-2xl font-medium mb-4 ">Balance: <span id="balance-left">00</span></h3>

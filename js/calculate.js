@@ -1,5 +1,5 @@
 
-// Input amount common function
+// Input-amount common function
 function amountInput(amount){
     
     const inputAmount = document.getElementById(amount +'-input');
